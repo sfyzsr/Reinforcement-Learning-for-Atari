@@ -183,10 +183,6 @@ def train(doubleDQN = False, duelingDQN = False, gamma = 0.99, size = 1e6, log =
             q_value = q_values.gather(1, act_batch.unsqueeze(1)).squeeze(1)
             # print(q_value)
 
-            # next_q_state_values = Q_target(obs_next_batch)
-            # # compute V*(next_states) using predicted next q-values
-            # next_state_values =  next_q_state_values.max(-1)[0]  => next_q_value
-
             next_q_values = model(obs_next_batch)
 
             next_q_state_values = Q_target(obs_next_batch)
