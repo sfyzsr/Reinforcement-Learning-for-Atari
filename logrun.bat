@@ -1,0 +1,1 @@
+tensorboard --port=6007 --logdir="./logs"
