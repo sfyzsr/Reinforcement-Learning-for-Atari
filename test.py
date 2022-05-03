@@ -139,7 +139,7 @@ def test(path, num_episodes,env,actionDim,device,doubleDQN=False, duelingDQN=Fal
         if(episode%10==0):
             print(episode)
     avg_reward /= num_episodes
-    print("total reward: %5f" % (avg_reward))
+    print("total avg reward: %5f" % (avg_reward))
 
 # env = gym.make('Breakout-v0')
 # last_obs = env.reset()
